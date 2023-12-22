@@ -14,22 +14,23 @@ export default function App() {
       return;
     }
     return setFullName(`Full Name: ${firstName} ${lastName}`);
+    
   };
   return (
     <div className="App">
       <h1>Full Name Display</h1>
       <form>
         <input
-          type="text"
-          required
+          type="text"          
           value={firstName}
+          required
           onChange={(e) => setFirstName(e.target.value)}
         />
         <br />
         <input
-          type="text"
-          required
+          type="text"          
           value={lastName}
+          required
           onChange={(e) => setLastName(e.target.value)}
         />
         <br />
