@@ -7,12 +7,12 @@ export default function App() {
   const [fullName, setFullName] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!firstName || firstName === "") {
-      return;
-    }
-    if (!lastName || lastName === "") {
-      return;
-    }
+    // if (!firstName || firstName === "") {
+    //   return;
+    // }
+    // if (!lastName || lastName === "") {
+    //   return;
+    // }
     return setFullName(`Full Name: ${firstName} ${lastName}`);
     
   };
