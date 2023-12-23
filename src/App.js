@@ -7,28 +7,31 @@ export default function App() {
   const [fullName, setFullName] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!firstName ) {
-      setFirstName("Please fill out  this field")
-      return;
-    }
-    if (!lastName) {
-      setLastName("Please fill  out this field")
-      return;
-    }
+    if (firstName && lastName) {
+    //   setFirstName("Please fill out  this field")
+    //   return;
+    // }
+    // if (!lastName) {
+    //   setLastName("Please fill  out this field")
+    //   return;
+    // }
     return setFullName(`Full Name: ${firstName} ${lastName}`);
-    
+    }
   };
   return (
     <div className="App">
       <h1>Full Name Display</h1>
-      <form>
-      <label htmlFor="firstName">First Name:</label>
+      <form onSubmit={(e)=>handleSubmit(e)}>
+      <label htmlFor="firstName" >First Name:</label>
 
         <input
           type="text"          
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
+          id="firstName"
           required
+
+
         />
         <br />
         <label htmlFor="lastName">First Name:</label>
@@ -38,9 +41,10 @@ export default function App() {
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
           required
+          id="lastName"
         />
         <br />
-        <button type="submit" onClick={handleSubmit}>
+        <button type="submit" >
           Submit
         </button>
       </form>
