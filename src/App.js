@@ -48,7 +48,8 @@ export default function App() {
           Submit
         </button>
       </form>
-      <p>{fullName && fullName}</p>
+      {fullName && <p>{fullName}</p>}
+      
     </div>
   );
 }
